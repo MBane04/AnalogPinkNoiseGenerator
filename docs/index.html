@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Pink Noise Generator - Mason Bane</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Analog Pink Noise Generator</h1>
+        <p>An educational electronics project demonstrating analog circuit design from simulation to implementation</p>
+        <p style="font-size: 0.95em; opacity: 0.95; margin-bottom: 25px;">by Mason Bane &amp; Cameron Osborne</p>
+        <div class="header-links">
+            <a href="https://github.com/MBane04/AnalogPinkNoiseGenerator" target="_blank" class="header-btn">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="../reports/PinkNoiseProjectFinalReport.pdf" target="_blank" class="header-btn">
+                <i class="fas fa-file-pdf"></i> Read Full Report
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <button id="nav-toggle" class="nav-toggle" title="Toggle menu"><i class="fas fa-bars"></i></button>
+        <ul>
+            <li><a href="#overview"><i class="fas fa-info-circle"></i> Overview</a></li>
+            <li><a href="#design"><i class="fas fa-drafting-compass"></i> Design</a></li>
+            <li><a href="#results"><i class="fas fa-chart-line"></i> Results</a></li>
+            <li><a href="#audio"><i class="fas fa-volume-up"></i> Audio</a></li>
+            <li><a href="#build"><i class="fas fa-tools"></i> Build</a></li>
+            <li><button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle dark mode">
+                <i class="fas fa-moon"></i><span class="mode-label">Dark</span>
+            </button></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <section id="overview">
+            <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img src="../images/breadboard/FinalBreadboard.jpg" alt="Final Breadboard Implementation" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p class="image-caption">Final Breadboard Implementation</p>
+            </div>
+            <p>This project demonstrates the practical design and implementation of an analog pink (1/f) noise generator. Pink noise—characterized by equal power per octave—is widely used in audio testing, acoustic measurements, psychoacoustic research, and as a sleep aid.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>True Analog Generation</h3>
+                    <p>Leverages avalanche breakdown noise from a reverse-biased BJT for authentic white noise</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wave-square"></i>
+                    <h3>Passive Frequency Shaping</h3>
+                    <p>Multi-stage RC filter network provides -3 dB/octave spectral slope</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3>Adjustable Output</h3>
+                    <p>User-controllable amplitude (0-2V peak) via potentiometer</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Comprehensive Validation</h3>
+                    <p>Performance verified through simulation and physical measurements</p>
+                </div>
+            </div>
+
+            <div class="specs-box">
+                <h3>Core Specifications</h3>
+                <ul>
+                    <li><strong>Output Noise:</strong> Pink Noise (approx. -3 dB/octave PSD slope)</li>
+                    <li><strong>Output Amplitude:</strong> Adjustable up to 2V peak (via potentiometer)</li>
+                    <li><strong>DC Offset:</strong> Centered at 0V</li>
+                    <li><strong>Power Supply:</strong> Dual ±9V DC (from two 9V batteries in series)</li>
+                    <li><strong>Key Components:</strong> BC337-16 BJT, TL072CP Op-Amps, Passive RC Network</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Design Section -->
+        <section id="design">
+            <h2><i class="fas fa-drafting-compass"></i> Circuit Design</h2>
+            
+            <div class="design-architecture">
+                <h3>Three-Stage Architecture</h3>
+                <div class="stage-cards">
+                    <div class="stage-card">
+                        <div class="stage-number">1</div>
+                        <h4>White Noise Generation</h4>
+                        <p>Generates white noise using the inherent avalanche breakdown noise of a reverse-biased BJT (BC337-16)</p>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-number">2</div>
+                        <h4>Spectral Shaping</h4>
+                        <p>Shapes the spectrum using a passive RC shelving filter network to achieve the -3 dB/octave slope</p>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-number">3</div>
+                        <h4>Amplification</h4>
+                        <p>Amplifies and buffers the signal with adjustable gain control for practical output levels</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schematic-container">
+                <h3>Circuit Schematic</h3>
+                <img src="../images/schematics/Schematic.png" alt="Circuit Schematic" class="schematic-img">
+                <p class="image-caption">Final circuit schematic showing all three stages</p>
+            </div>
+
+            <div class="design-highlights">
+                <h3>Design Highlights</h3>
+                <ul>
+                    <li><strong>Q1 (BC337-16):</strong> Operated in reverse breakdown mode as the white noise source, biased by the -9V rail</li>
+                    <li><strong>U1A (TL072):</strong> First-stage amplifier providing initial gain (~60 dB) to boost the weak noise signal</li>
+                    <li><strong>R7, R8, C5, C6, C7:</strong> Passive RC filter network forming three cascaded shelving stages</li>
+                    <li><strong>U2A (TL072):</strong> Output buffer stage with user-adjustable gain via potentiometer R9</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results">
+            <h2><i class="fas fa-chart-line"></i> Results & Performance</h2>
+            
+            <div class="results-summary">
+                <h3>Key Findings</h3>
+                <div class="findings-grid">
+                    <div class="finding-card challenge">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                        <p>The BC337-16 BJTs exhibited lower-than-expected avalanche breakdown noise amplitude</p>
+                    </div>
+                    <div class="finding-card solution">
+                        <h4><i class="fas fa-lightbulb"></i> Solution</h4>
+                        <p>Increased first-stage gain by replacing the 100kΩ feedback resistor with 10MΩ (100× gain increase)</p>
+                    </div>
+                    <div class="finding-card tradeoff">
+                        <h4><i class="fas fa-balance-scale"></i> Trade-off</h4>
+                        <p>While achieving required output voltage, resulted in a spectrum slightly "whiter" than ideal pink noise</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-box">
+                <h3>Performance Metrics</h3>
+                <ul>
+                    <li><strong>Spectral Slope:</strong> Achieved approximately -3 dB/octave across most of the audio band</li>
+                    <li><strong>Output Amplitude:</strong> Successfully met the 2V peak specification with adjustable control</li>
+                    <li><strong>Project Score:</strong> 145.16 (normalized error metric for adherence to ideal pink noise)</li>
+                </ul>
+            </div>
+
+            <div class="comparison-section">
+                <h3>Simulation vs. Real Results Comparison</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-pair">
+                        <div class="comparison-item">
+                            <h4>Simulation</h4>
+                            <img src="../images/simresults/PSDDataandSampledModel.png" alt="Simulated PSD">
+                            <p class="image-caption">Simulated PSD with Model</p>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>Real Circuit</h4>
+                            <img src="../images/realresults/PSDDataandSampledModel.png" alt="Measured PSD">
+                            <p class="image-caption">Measured PSD with Model</p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-pair">
+                        <div class="comparison-item">
+                            <h4>Simulation</h4>
+                            <img src="../images/simresults/PSDLinearFit.png" alt="Simulated Linear Fit">
+                            <p class="image-caption">Simulated PSD Linear Fit</p>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>Real Circuit</h4>
+                            <img src="../images/realresults/PSDLinearFit.png" alt="Measured Linear Fit">
+                            <p class="image-caption">Measured PSD Linear Fit</p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-pair">
+                        <div class="comparison-item">
+                            <h4>Simulation</h4>
+                            <img src="../images/simresults/VoltageTimeGraph.png" alt="Simulated Voltage">
+                            <p class="image-caption">Simulated Voltage vs. Time</p>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>Real Circuit</h4>
+                            <img src="../images/realresults/VoltageTimeGraph.png" alt="Measured Voltage">
+                            <p class="image-caption">Measured Voltage vs. Time</p>
+                        </div>
+                    </div>
+
+                    <div class="comparison-pair">
+                        <div class="comparison-item">
+                            <h4>Simulation</h4>
+                            <img src="../images/simresults/Histogram.png" alt="Simulated Histogram">
+                            <p class="image-caption">Simulated Distribution</p>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>Real Circuit</h4>
+                            <img src="../images/realresults/Histogram.png" alt="Measured Histogram">
+                            <p class="image-caption">Measured Distribution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio Section -->
+        <section id="audio">
+            <h2><i class="fas fa-volume-up"></i> Audio Samples</h2>
+            <p>Explore and listen to recorded signals from the project:</p>
+            
+            <div class="audio-grid">
+                <div class="audio-card">
+                    <div class="audio-icon"><i class="fas fa-wave-square"></i></div>
+                    <h3>Ideal Pink Noise</h3>
+                    <p>Reference signal for spectral comparison</p>
+                    <audio controls preload="none">
+                        <source src="../audio/ogg/idealPinkNoise.ogg" type="audio/ogg"/>
+                        <source src="../audio/wav/idealPinkNoise.wav" type="audio/wav"/>
+                        <source src="../audio/mp3/idealPinkNoise.mp3" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="download-links">
+                        <a href="../audio/ogg/idealPinkNoise.ogg" download><i class="fas fa-download"></i> OGG</a>
+                        <a href="../audio/wav/idealPinkNoise.wav" download><i class="fas fa-download"></i> WAV</a>
+                        <a href="../audio/mp3/idealPinkNoise.mp3" download><i class="fas fa-download"></i> MP3</a>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Simulated Pink Noise</h3>
+                    <p>Pink noise generated via simulation workflow</p>
+                    <audio controls preload="none">
+                        <source src="../audio/ogg/simulatedPinkNoise.ogg" type="audio/ogg"/>
+                        <source src="../audio/wav/simulatedPinkNoise.wav" type="audio/wav"/>
+                        <source src="../audio/mp3/simulatedPinkNoise.mp3" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="download-links">
+                        <a href="../audio/ogg/simulatedPinkNoise.ogg" download><i class="fas fa-download"></i> OGG</a>
+                        <a href="../audio/wav/simulatedPinkNoise.wav" download><i class="fas fa-download"></i> WAV</a>
+                        <a href="../audio/mp3/simulatedPinkNoise.mp3" download><i class="fas fa-download"></i> MP3</a>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-icon"><i class="fas fa-code"></i></div>
+                    <h3>Python White Noise</h3>
+                    <p>Synthetic white-noise source used for testing</p>
+                    <audio controls preload="none">
+                        <source src="../audio/ogg/whiteNoise.ogg" type="audio/ogg"/>
+                        <source src="../audio/wav/whiteNoise.wav" type="audio/wav"/>
+                        <source src="../audio/mp3/whiteNoise.mp3" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="download-links">
+                        <a href="../audio/ogg/whiteNoise.ogg" download><i class="fas fa-download"></i> OGG</a>
+                        <a href="../audio/wav/whiteNoise.wav" download><i class="fas fa-download"></i> WAV</a>
+                        <a href="../audio/mp3/whiteNoise.mp3" download><i class="fas fa-download"></i> MP3</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Build Section -->
+        <section id="build">
+            <h2><i class="fas fa-tools"></i> Build Progress</h2>
+            
+            <div class="build-gallery">
+                <div class="build-item">
+                    <img src="../images/breadboard/PrototypeBreadboard.jpg" alt="Prototype Build">
+                    <p class="image-caption">Early Prototype on Breadboard</p>
+                </div>
+                <div class="build-item">
+                    <img src="../images/breadboard/FinalBreadboard.jpg" alt="Final Build">
+                    <p class="image-caption">Final Breadboard Implementation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Improvements Section -->
+        <section id="future">
+            <h2><i class="fas fa-lightbulb"></i> Future Improvements</h2>
+            <p>While this project successfully demonstrates the core concepts of analog pink noise generation, several enhancements could improve performance:</p>
+            
+            <div class="improvements-grid">
+                <div class="improvement-card">
+                    <div class="improvement-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Enhanced Noise Source</h3>
+                    <ul>
+                        <li>Evaluate Zener diodes as alternative noise sources</li>
+                        <li>Screen/select BJTs with higher avalanche noise output</li>
+                        <li>Consider specialized noise diode ICs for consistent performance</li>
+                    </ul>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-icon"><i class="fas fa-filter"></i></div>
+                    <h3>Optimized Filter Design</h3>
+                    <ul>
+                        <li>Implement additional shelving stages for closer approximation to ideal -3 dB/octave slope</li>
+                        <li>Explore active filter topologies for better spectral shaping</li>
+                    </ul>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>PCB Implementation</h3>
+                    <ul>
+                        <li>Design a custom printed circuit board to reduce parasitic capacitance and improve noise immunity</li>
+                        <li>Implement proper grounding techniques and power plane design</li>
+                    </ul>
+                </div>
+
+                <div class="improvement-card">
+                    <div class="improvement-icon"><i class="fas fa-battery-full"></i></div>
+                    <h3>Power Supply Enhancement</h3>
+                    <ul>
+                        <li>Replace batteries with a regulated ±9V or ±12V supply for consistent long-term operation</li>
+                        <li>Add voltage regulation and additional filtering to minimize power supply noise</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Resources Section -->
+        <section id="resources">
+            <h2><i class="fas fa-folder-open"></i> Project Resources</h2>
+            <div class="resources-box">
+                <ul>
+                    <li><a href="https://github.com/MBane04/AnalogPinkNoiseGenerator" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a></li>
+                    <li><a href="../reports/PinkNoiseProjectFinalReport.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Complete Project Report (PDF)</a></li>
+                    <li><a href="https://github.com/MBane04/AnalogPinkNoiseGenerator/blob/main/README.md" target="_blank"><i class="fas fa-book"></i> Full Documentation</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mason Bane &amp; Cameron Osborne | <a href="https://mbane04.github.io" target="_blank">Portfolio</a> | <a href="https://github.com/MBane04" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

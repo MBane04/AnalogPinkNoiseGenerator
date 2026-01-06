@@ -36,7 +36,7 @@ The circuit employs a three-stage design:
 
 ## 📐 Circuit Schematic
 
-The final circuit schematic is shown below. For detailed design rationale and component selection criteria, refer to the [full project report](docs/PinkNoiseProjectFinalReport.pdf).
+The final circuit schematic is shown below. For detailed design rationale and component selection criteria, refer to the [full project report](reports/PinkNoiseProjectFinalReport.pdf).
 
 <p align="center">
   <img src="images/schematics/Schematic.png" alt="Final Circuit Schematic" width="700"/>
@@ -180,7 +180,7 @@ The circuit successfully generated pink noise and demonstrated the practical cha
 
 ## 📚 Documentation
 
-**Complete Project Report:** [`PinkNoiseProjectFinalReport.pdf`](docs/PinkNoiseProjectFinalReport.pdf)
+**Complete Project Report:** [`PinkNoiseProjectFinalReport.pdf`](reports/PinkNoiseProjectFinalReport.pdf)
 
 The comprehensive 15-page report includes:
 *   Theoretical background on pink noise and 1/f noise characteristics
@@ -208,7 +208,6 @@ Explore and listen to recorded signals in [audio/](audio/):
   </p>
   <p><strong>Simulated Pink Noise</strong><br/>
     <audio controls>
-      <!-- Corrected: Now points to simulatedPinkNoise files -->
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/simulatedPinkNoise.ogg" type="audio/ogg"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/simulatedPinkNoise.wav" type="audio/wav"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/simulatedPinkNoise.mp3" type="audio/mpeg"/>
@@ -217,7 +216,6 @@ Explore and listen to recorded signals in [audio/](audio/):
   </p>
   <p><strong>Python White Noise</strong><br/>
     <audio controls>
-      <!-- Corrected: Now points to whiteNoise files -->
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/whiteNoise.ogg" type="audio/ogg"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/whiteNoise.wav" type="audio/wav"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/whiteNoise.mp3" type="audio/mpeg"/>
@@ -268,7 +266,7 @@ While this project successfully demonstrates the core concepts of analog pink no
 
 **Acknowledgments:**
 *   **Dr. Eric J. Wyers** - Course instructor, project advisor, and technical guidance
-*   **ELEN 3445: Electronics 1** - University of Denver, Department of Electrical and Computer Engineering
+*   **ELEN 3445: Electronics 1** - Tarleton State University, Department of Electrical Engineering and Computer Science
 
 ## 📄 License
 
