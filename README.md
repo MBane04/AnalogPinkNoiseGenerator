@@ -208,25 +208,25 @@ Explore and listen to recorded signals in [audio/wav/](audio/wav/):
   </p>
   <p><strong>Simulated Pink Noise</strong><br/>
     <audio controls>
-      <source src="https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/ogg/simulatedPinkNoise.ogg" type="audio/ogg"/>
-      <source src="https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/wav/simulatedPinkNoise.wav" type="audio/wav"/>
-      <source src="https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/mp3/simulatedPinkNoise.mp3" type="audio/mpeg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/idealPinkNoise.ogg" type="audio/ogg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/idealPinkNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/idealPinkNoise.mp3" type="audio/mpeg"/>
       Your browser does not support the audio element.
     </audio>
   </p>
   <p><strong>Python White Noise</strong><br/>
     <audio controls>
-      <source src="https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/ogg/whiteNoise.ogg" type="audio/ogg"/>
-      <source src="https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/wav/whiteNoise.wav" type="audio/wav"/>
-      <source src="https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/mp3/whiteNoise.mp3" type="audio/mpeg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/simulatedPinkNoise.ogg" type="audio/ogg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/simulatedPinkNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/simulatedPinkNoise.mp3" type="audio/mpeg"/>
       Your browser does not support the audio element.
     </audio>
   </p>
 </div>
 
-If playback still fails, use the direct download links:
-- Ideal Pink Noise: [OGG](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/ogg/idealPinkNoise.ogg) · [WAV](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/wav/idealPinkNoise.wav)
-- Simulated Pink Noise: [OGG](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/ogg/simulatedPinkNoise.ogg) · [WAV](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/wav/simulatedPinkNoise.wav) · [MP3](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/mp3/simulatedPinkNoise.mp3)
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/whiteNoise.ogg" type="audio/ogg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/whiteNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/whiteNoise.mp3" type="audio/mpeg"/>
 - Python White Noise: [OGG](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/ogg/whiteNoise.ogg) · [WAV](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/wav/whiteNoise.wav) · [MP3](https://cdn.jsdelivr.net/gh/MBane04/AnalogPinkNoiseGenerator@main/audio/mp3/whiteNoise.mp3)
 
 
