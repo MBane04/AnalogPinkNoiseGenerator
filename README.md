@@ -192,7 +192,7 @@ The comprehensive 15-page report includes:
 
 ## 🔊 Audio Samples
 
-Explore and listen to recorded signals in [audio/](audio/):
+Explore and listen to recorded signals in [audio/wav/](audio/wav/):
 - **Ideal Pink Noise:** Reference signal for spectral comparison.
 - **Simulated Pink Noise:** Pink noise generated via simulation workflow.
 - **Python White Noise:** Synthetic white-noise source used for testing/simulation.
@@ -200,19 +200,22 @@ Explore and listen to recorded signals in [audio/](audio/):
 <div align="center">
   <p><strong>Ideal Pink Noise</strong><br/>
     <audio controls>
-      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/idealPinkNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/idealPinkNoise.ogg" type="audio/ogg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/idealPinkNoise.wav" type="audio/wav"/>
       Your browser does not support the audio element.
     </audio>
   </p>
   <p><strong>Simulated Pink Noise</strong><br/>
     <audio controls>
-      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/simulatedPinkNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/simulatedPinkNoise.ogg" type="audio/ogg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/simulatedPinkNoise.wav" type="audio/wav"/>
       Your browser does not support the audio element.
     </audio>
   </p>
   <p><strong>Python White Noise</strong><br/>
     <audio controls>
-      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/whiteNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/whiteNoise.ogg" type="audio/ogg"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/whiteNoise.wav" type="audio/wav"/>
       Your browser does not support the audio element.
     </audio>
   </p>
