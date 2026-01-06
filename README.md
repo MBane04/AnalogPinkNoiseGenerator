@@ -36,7 +36,7 @@ The circuit employs a three-stage design:
 
 ## 📐 Circuit Schematic
 
-The final circuit schematic is shown below. For detailed design rationale and component selection criteria, refer to the [full project report](reports/PinkNoiseProjectFinalReport.pdf).
+The final circuit schematic is shown below. For detailed design rationale and component selection criteria, refer to the [full project report](docs/PinkNoiseProjectFinalReport.pdf).
 
 <p align="center">
   <img src="images/schematics/Schematic.png" alt="Final Circuit Schematic" width="700"/>
@@ -180,7 +180,7 @@ The circuit successfully generated pink noise and demonstrated the practical cha
 
 ## 📚 Documentation
 
-**Complete Project Report:** [`PinkNoiseProjectFinalReport.pdf`](reports/PinkNoiseProjectFinalReport.pdf)
+**Complete Project Report:** [`PinkNoiseProjectFinalReport.pdf`](docs/PinkNoiseProjectFinalReport.pdf)
 
 The comprehensive 15-page report includes:
 *   Theoretical background on pink noise and 1/f noise characteristics
