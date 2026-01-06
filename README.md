@@ -199,7 +199,7 @@ Explore and listen to recorded signals in [audio/](audio/):
 
 <div align="center">
   <p><strong>Ideal Pink Noise</strong><br/>
-    <audio controls preload="none">
+    <audio controls>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/idealPinkNoise.ogg" type="audio/ogg"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/idealPinkNoise.wav" type="audio/wav"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/idealPinkNoise.mp3" type="audio/mpeg"/>
@@ -207,7 +207,8 @@ Explore and listen to recorded signals in [audio/](audio/):
     </audio>
   </p>
   <p><strong>Simulated Pink Noise</strong><br/>
-    <audio controls preload="none">
+    <audio controls>
+      <!-- Corrected: Now points to simulatedPinkNoise files -->
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/simulatedPinkNoise.ogg" type="audio/ogg"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/simulatedPinkNoise.wav" type="audio/wav"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/simulatedPinkNoise.mp3" type="audio/mpeg"/>
@@ -215,7 +216,8 @@ Explore and listen to recorded signals in [audio/](audio/):
     </audio>
   </p>
   <p><strong>Python White Noise</strong><br/>
-    <audio controls preload="none">
+    <audio controls>
+      <!-- Corrected: Now points to whiteNoise files -->
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/ogg/whiteNoise.ogg" type="audio/ogg"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/wav/whiteNoise.wav" type="audio/wav"/>
       <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/mp3/whiteNoise.mp3" type="audio/mpeg"/>
