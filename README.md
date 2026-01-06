@@ -11,7 +11,7 @@
 
 ## 📖 Project Overview
 
-This project demonstrates the practical design and implementation of an analog pink (1/f) noise generator. Pink noise—characterized by equal power per octave—is widely used in audio testing, acoustic measurements, psychoacoustic research, and as a sleep aid. 
+This project demonstrates the practical design and implementation of an analog pink (1/f) noise generator. Pink noise, characterized by equal power per octave, is widely used in audio testing, acoustic measurements, psychoacoustic research, and as a sleep aid. 
 
 The circuit employs a three-stage design:
 - **Stage 1:** Generates white noise using the inherent avalanche breakdown noise of a reverse-biased BJT (BC337-16)
@@ -200,19 +200,19 @@ Explore and listen to recorded signals in [audio/](audio/):
 <div align="center">
   <p><strong>Ideal Pink Noise</strong><br/>
     <audio controls>
-      <source src="audio/idealPinkNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/idealPinkNoise.wav" type="audio/wav"/>
       Your browser does not support the audio element.
     </audio>
   </p>
   <p><strong>Simulated Pink Noise</strong><br/>
     <audio controls>
-      <source src="audio/simulatedPinkNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/simulatedPinkNoise.wav" type="audio/wav"/>
       Your browser does not support the audio element.
     </audio>
   </p>
   <p><strong>Python White Noise</strong><br/>
     <audio controls>
-      <source src="audio/whiteNoise.wav" type="audio/wav"/>
+      <source src="https://raw.githubusercontent.com/MBane04/AnalogPinkNoiseGenerator/main/audio/whiteNoise.wav" type="audio/wav"/>
       Your browser does not support the audio element.
     </audio>
   </p>
