@@ -100,3 +100,70 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Image Modal Functions
+let currentImageIndex = 0;
+const galleryImages = [];
+
+// Collect all clickable images on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const clickableImages = document.querySelectorAll('.build-item img');
+    clickableImages.forEach((img, index) => {
+        galleryImages.push({
+            src: img.src,
+            alt: img.alt
+        });
+    });
+});
+
+function openModal(src, alt) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    
+    // Find the index of the clicked image
+    currentImageIndex = galleryImages.findIndex(img => img.src === src);
+    
+    modal.style.display = 'block';
+    modalImg.src = src;
+    modalImg.alt = alt;
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+}
+
+function showNextImage() {
+    if (galleryImages.length === 0) return;
+    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+    updateModalImage();
+}
+
+function showPrevImage() {
+    if (galleryImages.length === 0) return;
+    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateModalImage();
+}
+
+function updateModalImage() {
+    const modalImg = document.getElementById('modalImage');
+    const currentImage = galleryImages[currentImageIndex];
+    modalImg.src = currentImage.src;
+    modalImg.alt = currentImage.alt;
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    const modal = document.getElementById('imageModal');
+    if (modal.style.display === 'block') {
+        if (e.key === 'Escape') {
+            closeModal();
+        } else if (e.key === 'ArrowRight') {
+            showNextImage();
+        } else if (e.key === 'ArrowLeft') {
+            showPrevImage();
+        }
+    }
+});
