@@ -44,28 +44,28 @@
                 <img src="images/breadboard/FinalBreadboard.jpg" alt="Final Breadboard Implementation" style="max-width: 600px; width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                 <p class="image-caption">Final Breadboard Implementation</p>
             </div>
-            <p>This project demonstrates the practical design and implementation of an analog pink (1/f) noise generator. Pink noise—characterized by equal power per octave—is widely used in audio testing, acoustic measurements, psychoacoustic research, and as a sleep aid.</p>
+            <p>We built an analog pink-noise generator using a simple three-stage approach: a white-noise source, passive 1/f spectral shaping, and clean amplification. The goal was a -3 dB/octave pink-noise spectrum centered at 0 V with a user-adjustable output up to 2 V peak. The design was developed in simulation and validated with measurements.</p>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <i class="fas fa-microchip"></i>
-                    <h3>True Analog Generation</h3>
-                    <p>Leverages avalanche breakdown noise from a reverse-biased BJT for authentic white noise</p>
+                    <h3>Noise Source</h3>
+                    <p>Physical white-noise generation using a reverse-biased transistor</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-wave-square"></i>
-                    <h3>Passive Frequency Shaping</h3>
-                    <p>Multi-stage RC filter network provides -3 dB/octave spectral slope</p>
+                    <h3>1/f Shaping</h3>
+                    <p>Passive RC network targets a -3 dB/octave spectrum</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-sliders-h"></i>
-                    <h3>Adjustable Output</h3>
-                    <p>User-controllable amplitude (0-2V peak) via potentiometer</p>
+                    <h3>Output Level</h3>
+                    <p>Simple gain control for up to 2 V peak</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-check-circle"></i>
-                    <h3>Comprehensive Validation</h3>
-                    <p>Performance verified through simulation and physical measurements</p>
+                    <h3>Validated</h3>
+                    <p>Designed in simulation and confirmed with real measurements</p>
                 </div>
             </div>
 
@@ -115,10 +115,10 @@
             <div class="design-highlights">
                 <h3>Design Highlights</h3>
                 <ul>
-                    <li><strong>Q1 (BC337-16):</strong> Operated in reverse breakdown mode as the white noise source, biased by the -9V rail</li>
-                    <li><strong>U1A (TL072):</strong> First-stage amplifier providing initial gain (~60 dB) to boost the weak noise signal</li>
-                    <li><strong>R7, R8, C5, C6, C7:</strong> Passive RC filter network forming three cascaded shelving stages</li>
-                    <li><strong>U2A (TL072):</strong> Output buffer stage with user-adjustable gain via potentiometer R9</li>
+                    <li><strong>White-Noise Source:</strong> Reverse-biased transistor used for physical noise generation</li>
+                    <li><strong>Spectral Shaping:</strong> Cascaded passive RC stages approximate a -3 dB/octave slope</li>
+                    <li><strong>Amplification:</strong> High-gain stage lifts the shaped signal to usable levels</li>
+                    <li><strong>Level Control:</strong> User-adjustable output centered at 0 V</li>
                 </ul>
             </div>
         </section>
@@ -151,6 +151,7 @@
                     <li><strong>Spectral Slope:</strong> Achieved approximately -3 dB/octave across most of the audio band</li>
                     <li><strong>Output Amplitude:</strong> Successfully met the 2V peak specification with adjustable control</li>
                     <li><strong>Project Score:</strong> 145.16 (normalized error metric for adherence to ideal pink noise)</li>
+                    <li><strong>Ideal Reference:</strong> Ideal pink noise scored ~36 on the same metric</li>
                 </ul>
             </div>
 
@@ -296,7 +297,7 @@
         <!-- Future Improvements Section -->
         <section id="future">
             <h2><i class="fas fa-lightbulb"></i> Future Improvements</h2>
-            <p>While this project successfully demonstrates the core concepts of analog pink noise generation, several enhancements could improve performance:</p>
+            <p>While this project successfully demonstrates the core concepts of analog pink noise generation, several enhancements could significantly improve performance:</p>
             
             <div class="improvements-grid">
                 <div class="improvement-card">
@@ -315,15 +316,6 @@
                     <ul>
                         <li>Implement additional shelving stages for closer approximation to ideal -3 dB/octave slope</li>
                         <li>Explore active filter topologies for better spectral shaping</li>
-                    </ul>
-                </div>
-
-                <div class="improvement-card">
-                    <div class="improvement-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>PCB Implementation</h3>
-                    <ul>
-                        <li>Design a custom printed circuit board to reduce parasitic capacitance and improve noise immunity</li>
-                        <li>Implement proper grounding techniques and power plane design</li>
                     </ul>
                 </div>
 
