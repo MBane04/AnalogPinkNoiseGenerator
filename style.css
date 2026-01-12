@@ -18,7 +18,7 @@ body.dark-mode {
 }
 
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -93,7 +93,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #667eea;
+    background-color: #d97706;
 }
 
 .dark-mode-btn {
@@ -112,7 +112,7 @@ nav a:hover {
 }
 
 .dark-mode-btn:hover {
-    background-color: #667eea;
+    background-color: #d97706;
 }
 
 .mode-label {
@@ -140,10 +140,10 @@ body.dark-mode section {
 }
 
 section h2 {
-    color: #667eea;
+    color: #d97706;
     font-size: 2em;
     margin-bottom: 30px;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid #d97706;
     padding-bottom: 10px;
 }
 
@@ -185,12 +185,12 @@ body.dark-mode .feature-card {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(217, 119, 6, 0.35);
 }
 
 .feature-card i {
     font-size: 2.5em;
-    color: #667eea;
+    color: #d97706;
     margin-bottom: 15px;
 }
 
@@ -211,7 +211,7 @@ body.dark-mode .feature-card p {
 /* Specs Box */
 .specs-box, .metrics-box, .resources-box {
     background-color: #f7f7fb;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #d97706;
     padding: 25px;
     border-radius: 6px;
     margin: 25px 0;
@@ -221,7 +221,7 @@ body.dark-mode .specs-box,
 body.dark-mode .metrics-box,
 body.dark-mode .resources-box {
     background-color: #1c1c24;
-    border-color: #8ba3ff;
+    border-color: #f2c27b;
 }
 
 .specs-box ul, .metrics-box ul, .resources-box ul {
@@ -249,14 +249,14 @@ body.dark-mode .metrics-box ul li {
 }
 
 .resources-box a {
-    color: #667eea;
+    color: #d97706;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .resources-box a:hover {
-    color: #764ba2;
+    color: #b45309;
     text-decoration: underline;
 }
 
@@ -273,23 +273,23 @@ body.dark-mode .metrics-box ul li {
 }
 
 .stage-card {
-    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-    border: 2px solid #667eea40;
+    background: linear-gradient(135deg, #d9770615 0%, #b4530915 100%);
+    border: 2px solid #d9770640;
     padding: 20px;
     border-radius: 8px;
     position: relative;
 }
 
 body.dark-mode .stage-card {
-    background: linear-gradient(135deg, #667eea25 0%, #764ba225 100%);
-    border-color: #667eea60;
+    background: linear-gradient(135deg, #d9770625 0%, #b4530925 100%);
+    border-color: #d9770660;
 }
 
 .stage-number {
     position: absolute;
     top: -15px;
     left: 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
     color: white;
     width: 40px;
     height: 40px;
@@ -303,12 +303,12 @@ body.dark-mode .stage-card {
 
 .stage-card h4 {
     margin: 15px 0 10px 0;
-    color: #667eea;
+    color: #d97706;
     font-size: 1.1em;
 }
 
 body.dark-mode .stage-card h4 {
-    color: #8ba3ff;
+    color: #f2c27b;
 }
 
 /* Schematic Container */
@@ -366,7 +366,7 @@ body.dark-mode .design-highlights ul li {
     content: "▸";
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: #d97706;
     font-weight: bold;
 }
 
@@ -406,12 +406,12 @@ body.dark-mode .finding-card.solution {
 
 .finding-card.tradeoff {
     background-color: #e7e7ff;
-    border-color: #667eea;
+    border-color: #d97706;
 }
 
 body.dark-mode .finding-card.tradeoff {
     background-color: #1e1e2e;
-    border-color: #8ba3ff;
+    border-color: #f2c27b;
 }
 
 .finding-card h4 {
@@ -449,13 +449,13 @@ body.dark-mode .comparison-item {
 
 .comparison-item h4 {
     text-align: center;
-    color: #667eea;
+    color: #d97706;
     margin-bottom: 15px;
     font-size: 1.2em;
 }
 
 body.dark-mode .comparison-item h4 {
-    color: #8ba3ff;
+    color: #f2c27b;
 }
 
 .comparison-item img {
@@ -491,7 +491,7 @@ body.dark-mode .audio-card {
 
 .audio-icon {
     font-size: 3em;
-    color: #667eea;
+    color: #d97706;
     margin-bottom: 15px;
 }
 
@@ -524,7 +524,7 @@ body.dark-mode .audio-card p {
 }
 
 .download-links a {
-    color: #667eea;
+    color: #d97706;
     text-decoration: none;
     font-size: 0.9em;
     font-weight: 500;
@@ -532,7 +532,7 @@ body.dark-mode .audio-card p {
 }
 
 .download-links a:hover {
-    color: #764ba2;
+    color: #b45309;
     text-decoration: underline;
 }
 
@@ -645,12 +645,12 @@ body.dark-mode .improvement-card {
 
 .improvement-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(217, 119, 6, 0.35);
 }
 
 .improvement-icon {
     font-size: 2.5em;
-    color: #667eea;
+    color: #d97706;
     margin-bottom: 15px;
 }
 
@@ -680,14 +680,14 @@ body.dark-mode .improvement-card ul li {
     content: "▸";
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: #d97706;
     font-weight: bold;
 }
 
 /* Contributors Box */
 .contributors-box, .acknowledgments-box, .license-box {
     background-color: #f7f7fb;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #d97706;
     padding: 25px;
     border-radius: 6px;
     margin: 25px 0;
@@ -697,11 +697,11 @@ body.dark-mode .contributors-box,
 body.dark-mode .acknowledgments-box,
 body.dark-mode .license-box {
     background-color: #1c1c24;
-    border-color: #8ba3ff;
+    border-color: #f2c27b;
 }
 
 .contributors-box h3, .acknowledgments-box h3, .license-box h3 {
-    color: #667eea;
+    color: #d97706;
     margin-bottom: 15px;
     font-size: 1.2em;
 }
@@ -709,7 +709,7 @@ body.dark-mode .license-box {
 body.dark-mode .contributors-box h3,
 body.dark-mode .acknowledgments-box h3,
 body.dark-mode .license-box h3 {
-    color: #8ba3ff;
+    color: #f2c27b;
 }
 
 .contributors-box ul, .acknowledgments-box ul {
@@ -739,7 +739,7 @@ body.dark-mode .acknowledgments-box ul li {
     content: "▸";
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: #d97706;
     font-weight: bold;
 }
 
@@ -748,14 +748,14 @@ body.dark-mode .acknowledgments-box ul li {
 }
 
 .license-box a {
-    color: #667eea;
+    color: #d97706;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .license-box a:hover {
-    color: #764ba2;
+    color: #b45309;
     text-decoration: underline;
 }
 
@@ -772,7 +772,7 @@ footer {
 }
 
 footer a {
-    color: #667eea;
+    color: #d97706;
     text-decoration: none;
 }
 
